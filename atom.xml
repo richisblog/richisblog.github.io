@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://richisblog.github.io</id>
+    <title>Richis&apos; blogs</title>
+    <updated>2024-02-23T07:34:00.383Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://richisblog.github.io"/>
+    <link rel="self" href="https://richisblog.github.io/atom.xml"/>
+    <subtitle>花自向阳开，人终往前走。
+勇敢做自己！</subtitle>
+    <logo>https://richisblog.github.io/images/avatar.png</logo>
+    <icon>https://richisblog.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2024, Richis&apos; blogs</rights>
+    <entry>
+        <title type="html"><![CDATA[雪]]></title>
+        <id>https://richisblog.github.io/post/xue/</id>
+        <link href="https://richisblog.github.io/post/xue/">
+        </link>
+        <updated>2024-02-22T19:14:21.000Z</updated>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://richisblog.github.io/post-images/1708629354312.jpg" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AP-CSA-UNIT1]]></title>
+        <id>https://richisblog.github.io/post/ap-csa-unit1/</id>
+        <link href="https://richisblog.github.io/post/ap-csa-unit1/">
+        </link>
+        <updated>2024-02-17T12:11:39.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="unit-1-primitive-types-初始类型">Unit 1 : Primitive Types 初始类型</h1>
+<h2 id="11-编程入门了解一些注意事项">1.1 编程入门，了解一些注意事项</h2>
+<h3 id="print-和-println-的区别">print 和 println 的区别：</h3>
+<p>两者均适用于输出内容。</p>
+<pre><code class="language-java">System.out.println(&quot;hello, world!&quot;);
+System.out.print(&quot;hello, world!&quot;);
+</code></pre>
+<p>println 输出内容，并换行。<br>
+print 输出内容，不换行。</p>
+<h3 id="注释写法">注释写法：</h3>
+<p>注释帮助理解代码内容，不参与代码运行。</p>
+<pre><code class="language-java">// this is a comments.
+</code></pre>
+<p>双斜杆后面随便写。</p>
+<h3 id="分号">分号</h3>
+<p>每个独立的代码完成后需要一个；以保证运行。</p>
+<h2 id="12-变量-variable">1.2 变量 variable</h2>
+<h3 id="声明">声明</h3>
+<p>变量必须声明，没有声明的变量使用会报错；<br>
+变量可以先声明在赋值，但必须有赋值，没有赋值会报错；<br>
+变量只能且必须声明一次，多次声明会报错；<br>
+变量不能数字开头，必须使用字母或_开头，否则报错；<br>
+变量起名要用meaningful name（驼峰命名法），保证读者知道这是什么变量。</p>
+<h3 id="原始类型">原始类型</h3>
+<p>int：integers 整数<br>
+double：decimal number 浮点数<br>
+boolean：布尔值<br>
+考试只有这三种，所以不多介绍。</p>
+<p>PS：data type 分为  初始类型和引用类型。</p>
+<h3 id="reference-types-引用类型">Reference Types 引用类型</h3>
+<p>String 字符串，s 要大写，是引用类型。</p>
+<h2 id="13-基础语法数学表达式和赋值语句">1.3 基础语法：数学表达式和赋值语句</h2>
+<h3 id="数学表达式">数学表达式</h3>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>描述</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>加法</td>
+<td><code>a + b</code></td>
+</tr>
+<tr>
+<td>-</td>
+<td>减法</td>
+<td><code>a - b</code></td>
+</tr>
+<tr>
+<td>*</td>
+<td>乘法</td>
+<td><code>a * b</code></td>
+</tr>
+<tr>
+<td>/</td>
+<td>除法</td>
+<td><code>a / b</code></td>
+</tr>
+<tr>
+<td>%</td>
+<td>取模（取余数）</td>
+<td><code>a % b</code></td>
+</tr>
+</tbody>
+</table>
+<p>取模常用于测量倍数，语数，循环，奇偶数。</p>
+<h4 id="优先级">优先级</h4>
+<p>乘*、除/、取模% &gt; 加+、减-</p>
+<h4 id="除法">除法</h4>
+<p>整数(int)除整数只会得到整数，如果出现小数也只保留整数部分。<br>
+举个例子:</p>
+<pre><code class="language-java">int x = 2;
+int y = 3;
+int z = -2;
+System.out.println(x/y);
+System.out.println(y/x);
+System.out.println(y/z);
+System.out.println(z/y);
+</code></pre>
+<p>输出结果为：</p>
+<pre><code class="language-java">0
+1
+-1
+0
+</code></pre>
+<p>但当除数或被除数为小数时，就可以得到小数。<br>
+例如：</p>
+<pre><code class="language-java">int x = 2;
+double y = 3; //这里改为了小数 double
+int z = -2;
+System.out.println(x/y);
+System.out.println(y/x);
+System.out.println(y/z);
+System.out.println(z/y);
+</code></pre>
+<pre><code class="language-java">0.6666666666666666
+1.5
+-1.5
+-0.6666666666666666
+</code></pre>
+<h3 id="赋值符号">赋值符号 =</h3>
+<p>单个 = 是赋值符号，即将等号右侧的内容赋值给左侧；<br>
+等号两侧数据类型不同会报错；<br>
+等号 不代表相等，而是赋值。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AP-CSA-Orientation]]></title>
+        <id>https://richisblog.github.io/post/CSA/</id>
+        <link href="https://richisblog.github.io/post/CSA/">
+        </link>
+        <updated>2024-02-17T02:10:17.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="ide-集成开发环境-安装">IDE (集成开发环境) 安装:</h1>
+<ol>
+<li><a href="https://www.eclipse.org/downloads/">eclipse</a>下载对应版本（win / mac arm / mac x86）</li>
+<li><a href="https://tool.lu/coderunner/">线上编译器</a> 临时测试使用</li>
+</ol>
+<p>Participation is the key in this course. If you have any questions related to the lecture, don't hesitate to ask because someone else might have the same question as you do.<br>
+菜 就多问<br>
+Coding is extremely important to achieve this course.<br>
+菜 就多练<br>
+We assume you do not have any programming skills or knowledge in this course.😄<br>
+菜 就多学</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello Gridea]]></title>
+        <id>https://richisblog.github.io/post/hello-gridea/</id>
+        <link href="https://richisblog.github.io/post/hello-gridea/">
+        </link>
+        <updated>2018-12-11T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+<!-- more -->
+<p><a href="https://github.com/getgridea/gridea">Github</a><br>
+<a href="https://gridea.dev/">Gridea 主页</a><br>
+<a href="https://fehey.com/">示例网站</a></p>
+<h2 id="特性">特性👇</h2>
+<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
+<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
+<p>🏷️  你可以对文章进行标签分组</p>
+<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
+<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
+<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
+<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
+<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
+<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
+<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
+<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
+<p>未来，它一定会成为你离不开的伙伴</p>
+<p>尽情发挥你的才华吧！</p>
+<p>😘 Enjoy~</p>
+]]></content>
+    </entry>
+</feed>
